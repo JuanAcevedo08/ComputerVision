@@ -17,7 +17,7 @@ cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1080)
 intruso = None
 
 def send_message(msg:str):
-    wehbook_url = 'https://discord.com/api/webhooks/1430551427595374615/HCDKg0yR2GafgvK6VK21CrmW81mnhI2LpoLPdX9yCPj--Paj6iad4VQvGzzGbxVyWf2G'
+    wehbook_url = 'URL donde se envian los mensajes '
     data = {"content": msg}
     requests.post(wehbook_url, json=data)
 
