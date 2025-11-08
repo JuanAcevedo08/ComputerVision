@@ -398,6 +398,79 @@ FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
 .vscode/*
+
+# -----------------------------
+# Project-specific Python & dataset ignores
+# -----------------------------
+# Virtual environments (common names)
+venv/
+.venv/
+env/
+ENV/
+venv.bak/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Test / coverage
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# Editor/project settings
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Environment / secret files
+.env
+.env.*
+secrets.yml
+credentials.json
+
+# Databases
+*.sqlite3
+*.db
+
+# Large datasets, images and labels (ignore dataset folders by name anywhere)
+# Note: if you intentionally track images for the project, add an exception (!path/to/image)
+**/images/
+**/labels/
+**/imagenes_normales/
+
+# Windows alternate data streams created on some systems (Zone.Identifier)
+*:*Zone.Identifier
+
+# Temporary or OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# End of custom rules
+
+# ------------------------------------------------------------------
+# Allow tracking images/labels for the detection project
+# (we ignore images/labels globally above to avoid accidental dataset commits,
+#  but allow the project's own data directories to be tracked below)
+!deteccion_normal_es/images/
+!deteccion_normal_es/labels/
+!deteccion_normal_es/**/images/
+!deteccion_normal_es/**/labels/
+
+# If you want to keep datasets private but still include small sample images,
+# create a `deteccion_normal_es/samples/` directory and track that explicitly:
+#!deteccion_normal_es/samples/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json

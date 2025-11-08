@@ -1,0 +1,36 @@
+# requirements.txt
+# Core dependencies for the detection project and fine-tuning workflows
+# NOTE: PyTorch (torch) has multiple builds depending on CUDA/ROCm/CPU. Choose the
+# correct installation line from https://pytorch.org/get-started/locally and then
+# run the matching pip/conda command. Installing a generic `pip install torch` may
+# pull a CPU-only wheel which is fine if you don't need GPU acceleration.
+
+ultralytics>=8.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+opencv-python>=4.7.0
+numpy>=1.24.0
+PyYAML>=6.0
+requests>=2.31.0
+albumentations>=1.3.0
+tqdm>=4.65.0
+pandas>=2.0.0
+scikit-learn>=1.2.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Optional / tooling (uncomment if you use them)
+# tensorboard>=2.12.0
+# wandb>=0.15.0
+# accelerate>=0.20.0
+
+# How to install (example, CPU-only):
+# python -m pip install -r requirements.txt
+
+# If you need CUDA-enabled PyTorch, install torch first with the correct CUDA
+# selector then install the rest, for example (replace with proper selector):
+# python -m pip install "torch==2.x.x+cuXXX" -f https://download.pytorch.org/whl/torch_stable.html
+# python -m pip install -r requirements.txt --no-deps
+
+# After installing packages, you can freeze exact versions with:
+# pip freeze > requirements.txt

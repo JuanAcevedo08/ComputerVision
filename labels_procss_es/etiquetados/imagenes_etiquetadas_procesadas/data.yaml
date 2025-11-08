@@ -1,0 +1,6 @@
+train: 'data\etiquetados\imagenes_etiquetadas\train'
+val: 'data\etiquetados\imagenes_etiquetadas\val'
+test: 'data\etiquetados\imagenes_etiquetadas\test'
+
+nc: 3
+names: ['Computer', 'Developer', 'Glasses']
